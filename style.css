@@ -35,11 +35,12 @@ body {
     position: absolute;
     top: 0; 
     left: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
     background-image: url('profile.jpg');
     background-size: cover;
-    background-position: center 30%; /* ปรับให้เห็นหน้าชัดเจนขึ้น */
+    background-position: 70% 30%; /* บีบภาพจากขวาเข้าหาซ้าย */
+    background-repeat: no-repeat;
 }
 
 /* Layer ไล่สีจากโปร่งใสไปยังสีน้ำเงินเข้ม #000066 */
@@ -53,8 +54,8 @@ body {
     background: linear-gradient(
         to right, 
         rgba(0, 0, 102, 0) 0%, 
-        rgba(0, 0, 102, 0.4) 40%, 
-        #000066 65%, 
+        rgba(0, 0, 102, 0.4) 45%, 
+        #000066 70%, 
         #000066 100%
     );
 }
@@ -249,6 +250,9 @@ body {
     }
     .hero-image-container {
         width: 100%;
+        background-size: cover;
+        background-position: 70% center;
+        background-color: #000066;
     }
     .gradient-mask {
         background: linear-gradient(
@@ -271,5 +275,12 @@ body {
     }
     .project-tech, .study-status {
         margin-top: 2px;
+    }
+}
+
+@media screen and (max-width: 850px) and (orientation: portrait) {
+    .hero-image-container {
+        background-image: url('profile-vertical.jpg');
+        background-position: center center;
     }
 }

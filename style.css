@@ -1,0 +1,275 @@
+/* รีเซ็ตค่าเริ่มต้นและตั้งค่าพื้นฐาน */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mitr', sans-serif;
+    background-color: #ffffff;
+    color: #2d3748;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==================================================
+   HERO SECTION (เปลี่ยนให้ Gradient กลืนกันแบบสมบูรณ์)
+================================================== 
+*/
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #000066; /* สีน้ำเงินเข้ม */
+    overflow: hidden;
+}
+
+/* ให้คอนเทนเนอร์รูปภาพกว้าง 100% เพื่อไม่ให้เกิดเส้นตัดขอบ */
+.hero-image-container {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('profile.jpg');
+    background-size: cover;
+    background-position: center 30%; /* ปรับให้เห็นหน้าชัดเจนขึ้น */
+}
+
+/* Layer ไล่สีจากโปร่งใสไปยังสีน้ำเงินเข้ม #000066 */
+.gradient-mask {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    /* ปรับองศาการไล่สีให้เนียนจากซ้ายไปขวา โดยด้านขวาจะกลายเป็นทึบ 100% */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 102, 0) 0%, 
+        rgba(0, 0, 102, 0.4) 40%, 
+        #000066 65%, 
+        #000066 100%
+    );
+}
+
+.hero-info {
+    position: absolute;
+    top: 50%;
+    right: 8%; /* ขยับเข้ามานิดหน่อยให้อยู่ในโซนทึบ */
+    transform: translateY(-50%);
+    width: 45%;
+    text-align: right;
+    z-index: 10;
+    color: #ffffff; 
+}
+
+.hero-info h1 {
+    font-size: 3.5rem;
+    margin: 0 0 5px 0;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+}
+
+.hero-info .subtitle {
+    font-size: 1.2rem;
+    color: #cbd5e0;
+    font-weight: 400;
+    margin: 0 0 25px 0;
+    letter-spacing: 0.5px;
+}
+
+.contact-info p {
+    margin: 6px 0;
+    font-size: 1.05rem;
+    color: #e2e8f0;
+}
+
+.contact-info a {
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ==================================================
+   MAIN CONTENT LAYOUT (หัวข้ออยู่ซ้าย ข้อมูลอยู่ขวา แก้การตัดคำ)
+================================================== 
+*/
+.resume-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* แบ่งสัดส่วนซ้าย-ขวาด้วย Flexbox */
+.resume-section {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* ระยะห่างระหว่างคอลัมน์ซ้ายและขวา */
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 35px;
+}
+
+/* ฝั่งซ้าย: หัวข้อ (กำหนดขนาดความกว้างตายตัว เพื่อไม่ให้ข้อความโดนบีบ) */
+.section-left {
+    flex: 0 0 240px; /* ล็อกความกว้างไว้ที่ 240px */
+}
+
+/* ฝั่งขวา: ข้อมูลเนื้อหา (ยืดหยุ่นใช้พื้นที่ที่เหลือทั้งหมด) */
+.section-right {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: #000066; 
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ตกแต่งเนื้อหาภายในฝั่งขวา */
+.section-right p {
+    margin-top: 0;
+}
+
+.project-item {
+    margin-bottom: 25px;
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.project-title {
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #1a202c;
+}
+
+.project-tech {
+    color: #000066; 
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.details-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.details-list li {
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+/* ส่วนการศึกษา */
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #1a202c;
+}
+
+.study-status {
+    color: #718096;
+    font-size: 0.95rem;
+}
+
+.faculty {
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.academic-performance {
+    background-color: #f7fafc;
+    border-left: 3px solid #000066;
+    padding: 12px 15px;
+    margin: 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* จัดกลุ่มทักษะ */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skills-category h3 {
+    font-size: 1.05rem;
+    color: #000066;
+    margin: 0 0 5px 0;
+    font-weight: 500;
+}
+
+.skills-category p {
+    margin: 0;
+    color: #4a5568;
+}
+
+/* Responsive สำหรับหน้าจอขนาดเล็ก/มือถือ */
+@media screen and (max-width: 850px) {
+    .resume-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .section-left {
+        flex: auto;
+        border-bottom: 2px solid #000066;
+        padding-bottom: 5px;
+    }
+    .hero-section {
+        height: auto;
+        min-height: 550px;
+    }
+    .hero-image-container {
+        width: 100%;
+    }
+    .gradient-mask {
+        background: linear-gradient(
+            to bottom, 
+            rgba(0, 0, 102, 0) 0%, 
+            rgba(0, 0, 102, 0.7) 40%, 
+            #000066 100%
+        );
+    }
+    .hero-info {
+        width: 90%;
+        top: auto;
+        bottom: 5%;
+        right: 5%;
+        transform: none;
+        text-align: center;
+    }
+    .project-header, .education-header {
+        flex-direction: column;
+    }
+    .project-tech, .study-status {
+        margin-top: 2px;
+    }
+}

@@ -35,22 +35,26 @@
     <main class="resume-content">
         
         <!-- ส่วนสรุปประวัติโดยย่อ -->
-        <section class="resume-section">
+        <!-- เพิ่มคลาส reveal ที่นี่ -->
+        <section class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">ประวัติโดยย่อ<br>(Profile Summary)</h2>
             </div>
             <div class="section-right">
-                <p>นักศึกษาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ ผู้มีความหลงใหลในการพัฒนา Web Application และ Machine Learning มีพื้นฐานทางวิศวกรรมซอฟต์แวร์ที่แข็งแกร่ง ครอบคลุมทั้งการออกแบบสถาปัตยกรรมฐานข้อมูล การเขียนโปรแกรมเชิงวัตถุ และการพัฒนา Full-Stack มุ่งมั่นที่จะนำเทคโนโลยีการพัฒนาเว็บมาผสานเข้ากับความสามารถของ AI เพื่อสร้างสรรค์ระบบที่ชาญฉลาด ตอบโจทย์ผู้ใช้งาน และสามารถนำไปประยุกต์ใช้ได้จริงในระดับธุรกิจ</p>
+                <p>ปัจจุบันกำลังศึกษาชั้นปีที่ 2 สาขาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ มหาวิทยาลัยวลัยลักษณ์ครับ ผมมีความสนใจและสนุกกับการพัฒนา Web Application ควบคู่ไปกับการศึกษาด้าน Machine Learning ที่ผ่านมาได้พัฒนาทักษะตั้งแต่การวางโครงสร้างฐานข้อมูล การเขียนโค้ดแบบ OOP ไปจนถึงการทำเว็บแบบ Full-Stack ผ่านการทำโปรเจกต์จริง เป้าหมายของผมคือการนำเทคโนโลยีเว็บมาผสานกับ AI เพื่อสร้างระบบที่ฉลาด ใช้งานง่าย และสามารถแก้ปัญหาหรือต่อยอดธุรกิจได้จริง</p>
             </div>
         </section>
 
         <!-- ส่วนโปรเจกต์เด่น -->
-        <section class="resume-section">
+        <!-- เพิ่มคลาส reveal ที่นี่ -->
+        <section class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">โปรเจกต์เด่น<br>(Key Projects)</h2>
             </div>
             <div class="section-right">
-                <div class="project-item">
+                
+                <!-- เพิ่มคลาส reveal ที่แต่ละโปรเจกต์ เพื่อให้ค่อยๆ แสดงทีละอัน -->
+                <div class="project-item reveal">
                     <div class="project-header">
                         <span class="project-title">1. Coup Board Game Web Application</span>
                         <span class="project-tech">Full-Stack Web Development</span>
@@ -62,7 +66,7 @@
                     </ul>
                 </div>
 
-                <div class="project-item">
+                <div class="project-item reveal">
                     <div class="project-header">
                         <span class="project-title">2. Gas Station Management System</span>
                         <span class="project-tech">Java OOP Software Design</span>
@@ -74,7 +78,7 @@
                     </ul>
                 </div>
 
-                <div class="project-item">
+                <div class="project-item reveal">
                     <div class="project-header">
                         <span class="project-title">3. Energy Cost Tracking System</span>
                         <span class="project-tech">Database Architecture</span>
@@ -85,7 +89,7 @@
                     </ul>
                 </div>
 
-                <div class="project-item">
+                <div class="project-item reveal">
                     <div class="project-header">
                         <span class="project-title">4. Smart Plant Watering System</span>
                         <span class="project-tech">IoT & Embedded Systems</span>
@@ -99,7 +103,8 @@
         </section>
 
         <!-- ส่วนประสบการณ์ด้าน AI และประกาศนียบัตร -->
-        <section class="resume-section">
+        <!-- เพิ่มคลาส reveal ที่นี่ -->
+        <section class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">ประกาศนียบัตร & AI<br>(Certifications & AI)</h2>
             </div>
@@ -113,7 +118,8 @@
         </section>
 
         <!-- ส่วนประวัติการศึกษา -->
-        <section class="resume-section">
+        <!-- เพิ่มคลาส reveal ที่นี่ -->
+        <section class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">การศึกษา<br>(Education)</h2>
             </div>
@@ -131,7 +137,8 @@
         </section>
 
         <!-- ส่วนทักษะความสามารถ -->
-        <section class="resume-section" style="border-bottom: none;">
+        <!-- เพิ่มคลาส reveal ที่นี่ -->
+        <section class="resume-section reveal" style="border-bottom: none;">
             <div class="section-left">
                 <h2 class="section-title">ทักษะความสามารถ<br>(Technical Skills)</h2>
             </div>
@@ -154,7 +161,42 @@
         </section>
 
     </main>
+    
 </div>
+
+<!-- เพิ่มสคริปต์ JavaScript สำหรับจัดการแอนิเมชันตอนเลื่อนหน้าจอ -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ดึง Element ทุกตัวที่มีคลาส .reveal
+        const reveals = document.querySelectorAll('.reveal');
+
+        // ตั้งค่า Observer
+        const revealOptions = {
+            threshold: 0.15, // จะทำงานเมื่อเนื้อหาส่วนนั้นโผล่เข้ามาในจอแล้ว 15%
+            rootMargin: "0px 0px -50px 0px" // เผื่อระยะขอบล่างนิดหน่อยให้ดูเป็นธรรมชาติ
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // ถ้าเลื่อนมาเจอ ให้ใส่คลาส active
+                    entry.target.classList.add('active');
+                    
+                    // ถ้าอยากให้โชว์แค่ครั้งเดียวตอนเลื่อนลง เอา // บรรทัดล่างออก
+                    // observer.unobserve(entry.target); 
+                } else {
+                    // ถ้าอยากให้เลื่อนขึ้นแล้วหาย เลื่อนลงมาใหม่ก็โชว์อีก ปล่อยบรรทัดนี้ไว้
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, revealOptions);
+
+        // สั่งให้ Observer เริ่มจับตาดูทุก Element ที่มีคลาส .reveal
+        reveals.forEach(reveal => {
+            revealOnScroll.observe(reveal);
+        });
+    });
+</script>
 
 </body>
 </html>

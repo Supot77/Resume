@@ -25,7 +25,7 @@ body {
 .hero-section {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 500px; /* ปรับความสูงของ Hero Section */
     background-color: #000066; /* สีน้ำเงินเข้ม */
     overflow: hidden;
 }
@@ -39,7 +39,7 @@ body {
     height: 100%;
     background-image: url('profile.jpg');
     background-size: cover;
-    background-position: 70% 30%; /* บีบภาพจากขวาเข้าหาซ้าย */
+    background-position: 30% 70%; /* บีบภาพจากขวาเข้าหาซ้าย */
     background-repeat: no-repeat;
 }
 
@@ -54,8 +54,8 @@ body {
     background: linear-gradient(
         to right, 
         rgba(0, 0, 102, 0) 0%, 
-        rgba(0, 0, 102, 0.4) 45%, 
-        #000066 70%, 
+        rgba(0, 0, 102, 0.4) 50%, 
+        #000066 80%, 
         #000066 100%
     );
 }
@@ -284,3 +284,24 @@ body {
         background-position: center center;
     }
 }
+
+/* ==================================================
+   SCROLL REVEAL ANIMATIONS
+================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px); /* เลื่อนลงมา 40px */
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* ให้จังหวะแอนิเมชันดูนุ่มนวล */
+}
+
+/* คลาสที่จะถูกเติมด้วย JavaScript เมื่อเลื่อนมาเจอ */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* (ตัวเลือกเสริม) ทำให้แต่ละกล่องโปรเจกต์ทยอยขึ้นมาไม่พร้อมกัน */
+.project-item:nth-child(1) { transition-delay: 0.1s; }
+.project-item:nth-child(2) { transition-delay: 0.1s; }
+.project-item:nth-child(3) { transition-delay: 0.1s; }
+.project-item:nth-child(4) { transition-delay: 0.1s; }

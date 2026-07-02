@@ -53,7 +53,7 @@ body {
     /* ปรับองศาการไล่สีให้เนียนจากซ้ายไปขวา โดยด้านขวาจะกลายเป็นทึบ 100% */
     background: linear-gradient(
         to right, 
-        rgba(0, 0, 102, 0) 0%, 
+        rgba(0, 0, 102, 0) 20%, 
         rgba(0, 0, 102, 0.4) 50%, 
         #000066 80%, 
         #000066 100%
@@ -117,8 +117,8 @@ body {
     flex-direction: row;
     gap: 40px; /* ระยะห่างระหว่างคอลัมน์ซ้ายและขวา */
     margin-bottom: 40px;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 35px;
+    border-bottom: 2px solid #e1e7ef;
+    padding-bottom: 45px;
 }
 
 /* ฝั่งซ้าย: หัวข้อ (กำหนดขนาดความกว้างตายตัว เพื่อไม่ให้ข้อความโดนบีบ) */

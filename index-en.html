@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Supot Bamrung</title>
+    <link class="reveal" rel="icon" type="image/png" href="icon.png">
+    <!-- Import Mitr font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght=300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to style.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Import FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="resume-container">
+    <!-- Hero Banner Section -->
+    <header class="hero-section">
+        <div class="hero-image-container"></div>
+        <div class="gradient-mask"></div>
+        
+        <div class="hero-info">
+            <h1>Supot Bamrung</h1>
+            <p class="subtitle">Computer Engineering and Artificial Intelligence Student</p>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-location-dot"></i> Khao Thong, Krabi, Thailand</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:0653896258">065-389-6258</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:supot5888@gmail.com">supot5888@gmail.com</a></p>
+                <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Supot77" target="_blank">github.com/Supot77</a></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <!-- Navigation Menu -->
+            <div class="nav-links">
+                <a href="#profile">Profile</a>
+                <a href="#projects">Key Projects</a>
+                <a href="#cert-ai">Certifications & AI</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+            </div>
+            
+            <!-- Language Switch Button (Links back to TH page) -->
+            <div class="lang-switch">
+                <a href="index.html" class="lang-btn"><i class="fa-solid fa-globe"></i> TH</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Layout -->
+    <main class="resume-content">
+        
+        <!-- Profile Summary Section -->
+        <section id="profile" class="resume-section reveal">
+            <div class="section-left">
+                <h2 class="section-title">Profile Summary</h2>
+            </div>
+            <div class="section-right">
+                <p>Currently a third-year Computer Engineering and Artificial Intelligence student at Walailak University. I am passionate about and enjoy developing Web Applications alongside studying Machine Learning. My technical background includes database architecture design, Object-Oriented Programming (OOP), and full-stack web development through practical project experiences. My ultimate goal is to integrate web technologies with AI capabilities to build intelligent, user-friendly systems that solve real-world problems and drive business growth.</p>
+            </div>
+        </section>
+
+        <!-- Key Projects Section -->
+        <section id="projects" class="resume-section reveal">
+            <div class="section-left">
+                <h2 class="section-title">Key Projects</h2>
+            </div>
+            <div class="section-right">
+                
+                <!-- Project 1 -->
+                <div class="project-item reveal">
+                    <div class="project-header">
+                        <div class="title-wrapper">
+                            <span class="project-title">1. Coup Board Game Web Application</span>
+                            <a href="https://coup-49ffc.web.app/" target="_blank" class="project-link-btn">Live Demo</a>
+                        </div>
+                        <span class="project-tech">Full-Stack Web Development</span>
+                    </div>
+                    <ul class="details-list">
+                        <li>Designed and developed a web application for the Coup board game, supporting complex game logic and real-time player interactions (Action-Reaction mechanics).</li>
+                        <li>Utilized React (JSX) for frontend UI assembly and state machine management, coupled with Firebase for real-time database syncing and hosting.</li>
+                        <li>Implemented an optimized session persistence system via the browser, enabling players to achieve seamless reconnection during unexpected network disruptions.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item reveal">
+                    <div class="project-header">
+                        <span class="project-title">2. Gas Station Management System</span>
+                        <span class="project-tech">Java OOP Software Design</span>
+                    </div>
+                    <ul class="details-list">
+                        <li>Developed a fuel service station management simulation system as a Java console application.</li>
+                        <li>Acted as the lead developer responsible for software architecture design using UML Class Diagrams, strictly applying core OOP principles (Abstraction, Inheritance, and Interfaces).</li>
+                        <li>Programmed core modules for automated fuel price calculations, dispenser nozzle tracking, and automated membership discount calculations.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item reveal">
+                    <div class="project-header">
+                        <span class="project-title">3. Energy Cost Tracking System</span>
+                        <span class="project-tech">Database Architecture</span>
+                    </div>
+                    <ul class="details-list">
+                        <li>Analyzed business logic and designed a relational database architecture (ER Diagram) to manage asset records and utility expenditures across the university campus.</li>
+                        <li>Wrote clean SQL DDL statements to construct normalized tables while enforcing strict data integrity constraints to eliminate data redundancy and errors.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item reveal">
+                    <div class="project-header">
+                        <span class="project-title">4. Smart Plant Watering System</span>
+                        <span class="project-tech">IoT & Embedded Systems</span>
+                    </div>
+                    <ul class="details-list">
+                        <li>Engineered an automated smart irrigation system utilizing an ESP32 microcontroller integrated with soil moisture sensors and relay modules.</li>
+                        <li>Programmed system operations with non-blocking logic (BlynkTimer) and constructed an interactive dashboard for real-time metrics monitoring and manual remote override.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & AI Section -->
+        <section id="cert-ai" class="resume-section reveal">
+            <div class="section-left">
+                <h2 class="section-title">Certifications & AI</h2>
+            </div>
+            <div class="section-right">
+                <ul class="details-list">
+                    <li><strong>AI Developer Certificate:</strong> Certified by NECTEC under the ThaiLLM national project ecosystem.</li>
+                    <li><strong>LLM API Integration:</strong> Completed hands-on workshop training focusing on operational connection methodologies and prompting Large Language Models via API endpoints.</li>
+                    <li><strong>Machine Learning Project:</strong> Experienced in leveraging national public data packages from data.go.th to analyze trends and engineer machine learning predictive models in team-based coursework.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="resume-section reveal">
+            <div class="section-left">
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="section-right">
+                <div class="education-header">
+                    <span class="institution">Walailak University</span>
+                    <span class="study-status">3rd Year Undergraduate Student</span>
+                </div>
+                <div class="faculty">Bachelor of Engineering in Computer Engineering and Artificial Intelligence<br>School of Engineering and Technology</div>
+                <p class="academic-performance">
+                    <strong>Excellent Academic Performance (Selected Coursework):</strong><br>
+                    Data Structures and Algorithms (A), Object-Oriented Programming (A), Database System Design (A), Microprocessors and Embedded Systems (A)
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="resume-section reveal">
+            <div class="section-left">
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="section-right">
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3>Programming & Web</h3>
+                        <p>C, Java, Python, SQL, HTML, CSS, JavaScript (JSX), React, Node.js</p>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Databases & IoT</h3>
+                        <p>MySQL, Firebase, ESP32, Blynk, Git/GitHub, VS Code, CLI Tools</p>
+                    </div>
+                    <div class="skills-category">
+                        <h3>AI & Core Competencies</h3>
+                        <p>R Studio (Statistical Analysis), Machine Learning Concepts, Prompt Command Logic, OOP, Relational Database Design, State Machine Design, System Architecture</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills Section -->
+        <section id="soft-skills" class="resume-section reveal" style="border-bottom: none;">
+            <div class="section-left">
+                <h2 class="section-title">Soft Skills</h2>
+            </div>
+            <div class="section-right">
+                <ul class="details-list">
+                    <li><strong>Problem-Solving & Analytical Thinking:</strong> Ability to break down complex system requirements (such as board game mechanics or structural business rules) into logical computing constraints and structural data schemas.</li>
+                    <li><strong>Teamwork & Collaboration:</strong> Proven experience working in group development projects, ensuring precise distribution of engineering roles and technical alignment to meet project deadlines.</li>
+                    <li><strong>Adaptability & Continuous Learning:</strong> Ready to learn and integrate modern developer frameworks and paradigms, actively pursuing extracurricular AI/LLM deployment workshops.</li>
+                    <li><strong>Presentation & Communication:</strong> Skilled in clarifying abstract technical architecture systems for diverse audiences through comprehensive system design reporting and structured project presentations.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Site Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Supot Bamrung. All rights reserved.</p>
+            <p class="footer-tech">Designed & Built with <i class="fa-solid fa-code"></i> HTML, CSS & Vanilla JS</p>
+        </div>
+        <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+    </footer>
+    
+</div>
+
+<!-- Intersection Observer Script for Reveal Animations -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.15, 
+            rootMargin: "0px 0px -50px 0px" 
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, revealOptions);
+
+        reveals.forEach(reveal => {
+            revealOnScroll.observe(reveal);
+        });
+    });
+</script>
+
+</body>
+</html>

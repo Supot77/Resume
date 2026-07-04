@@ -102,6 +102,63 @@ body {
 }
 
 /* ==================================================
+   CONTACT ICONS (จัดระเบียบไอคอนการติดต่อ)
+================================================== */
+.contact-info p i {
+    width: 24px; /* ล็อกความกว้างของไอคอนให้เท่ากันทุกตัว บรรทัดจะได้ตรงกัน */
+    text-align: center;
+    margin-right: 8px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    color: #90cdf4; /* เพิ่มสีฟ้าอ่อนให้ไอคอนดูโดดเด่นตัดกับพื้นหลังสีเข้ม */
+}
+
+/* ==================================================
+   STICKY NAVBAR & SMOOTH SCROLL
+================================================== */
+/* ทำให้เวลาคลิกเมนู หน้าเว็บจะเลื่อนแบบนุ่มนวล */
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 100px;
+}
+
+/* แถบเมนู */
+.sticky-nav {
+    position: sticky; /* ล็อกเมนูไว้เมื่อเลื่อนหน้าจอมาถึงจุดนี้ */
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95); /* สีขาวแบบโปร่งแสงนิดๆ */
+    backdrop-filter: blur(5px); /* เบลอพื้นหลังเบาๆ สไตล์โมเดิร์น */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* จัดเมนูให้อยู่กึ่งกลาง */
+    gap: 30px;
+    padding: 15px 40px;
+    flex-wrap: wrap; /* รองรับหน้าจอมือถือ */
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-container a:hover {
+    color: #000066; /* สีน้ำเงินเข้มตอนเอาเมาส์ชี้ */
+}
+
+/* ปรับแก้ระยะขอบนิดหน่อย เพื่อไม่ให้เมนูลอยบังหัวข้อตอนเลื่อนมาถึง */
+.resume-section {
+    scroll-margin-top: 80px; 
+}
+
+/* ==================================================
    MAIN CONTENT LAYOUT (หัวข้ออยู่ซ้าย ข้อมูลอยู่ขวา แก้การตัดคำ)
 ================================================== 
 */
@@ -305,3 +362,79 @@ body {
 .project-item:nth-child(2) { transition-delay: 0.1s; }
 .project-item:nth-child(3) { transition-delay: 0.1s; }
 .project-item:nth-child(4) { transition-delay: 0.1s; }
+
+/* ==================================================
+   PROJECT LINKS & BUTTONS (ปุ่มดูผลงาน)
+================================================== */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* ช่วยให้ปุ่มปัดตกลงมาอัตโนมัติถ้าหน้าจอมือถือเล็กไป */
+}
+
+.project-link-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 12px;
+    background-color: #000066; /* ใช้สีหลักของเว็บ */
+    color: #ffffff !important;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 15px; /* ทำให้ขอบมนเป็นทรงแคปซูล */
+    transition: all 0.3s ease;
+}
+
+.project-link-btn:hover {
+    background-color: #1a202c; /* เปลี่ยนเป็นสีเทาเข้มตอนเอาเมาส์ชี้ */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ==================================================
+   FOOTER (ส่วนท้ายเว็บไซต์)
+================================================== */
+.site-footer {
+    background-color: #f7fafc; /* พื้นหลังสีเทาอ่อนมาก */
+    border-top: 1px solid #e2e8f0; /* เส้นคั่นบางๆ ด้านบน */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px; /* ดันให้ห่างจากเนื้อหาด้านบน */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.footer-tech {
+    font-size: 0.85rem !important;
+    color: #a0aec0 !important; /* สีเทาจางๆ ให้ดูเป็นกิมมิคเสริม */
+}
+
+/* ปุ่มกลับขึ้นด้านบน */
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #000066; /* สีหลักของเว็บ */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #1a202c;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

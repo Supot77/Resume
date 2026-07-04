@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- เชื่อมโยงไปยังไฟล์ style.css -->
     <link rel="stylesheet" href="style.css">
+    <!-- นำเข้า FontAwesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -24,20 +26,30 @@
             <h1>สุพจน์ บำรุง</h1>
             <p class="subtitle">นักศึกษาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์</p>
             <div class="contact-info">
-                <p>📍 เขาทอง, จังหวัดกระบี่, ประเทศไทย</p>
-                <p>📞 065-389-6258</p>
-                <p>✉️ supot5888@gmail.com</p>
-                <p>🌐 <a href="https://github.com/Supot77" target="_blank">github.com/Supot77</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> เขาทอง, จังหวัดกระบี่, ประเทศไทย</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:0653896258">065-389-6258</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:supot5888@gmail.com">supot5888@gmail.com</a></p>
+                <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Supot77" target="_blank">github.com/Supot77</a></p>
             </div>
         </div>
     </header>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a href="#profile">ประวัติโดยย่อ</a>
+            <a href="#projects">โปรเจกต์เด่น</a>
+            <a href="#cert-ai">ประกาศนียบัตร</a>
+            <a href="#education">การศึกษา</a>
+            <a href="#skills">ทักษะ</a>
+        </div>
+    </nav>
 
     <!-- ข้อมูลต่างๆ ด้านล่าง จัดเลย์เอาต์ หัวข้ออยู่ซ้าย ข้อมูลอยู่ขวา (Main Content) -->
     <main class="resume-content">
         
         <!-- ส่วนสรุปประวัติโดยย่อ -->
         <!-- เพิ่มคลาส reveal ที่นี่ -->
-        <section class="resume-section reveal">
+        <section id="profile" class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">ประวัติโดยย่อ<br>(Profile Summary)</h2>
             </div>
@@ -48,7 +60,7 @@
 
         <!-- ส่วนโปรเจกต์เด่น -->
         <!-- เพิ่มคลาส reveal ที่นี่ -->
-        <section class="resume-section reveal">
+        <section id="projects" class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">โปรเจกต์เด่น<br>(Key Projects)</h2>
             </div>
@@ -57,7 +69,11 @@
                 <!-- เพิ่มคลาส reveal ที่แต่ละโปรเจกต์ เพื่อให้ค่อยๆ แสดงทีละอัน -->
                 <div class="project-item reveal">
                     <div class="project-header">
-                        <span class="project-title">1. Coup Board Game Web Application</span>
+                        <div class="title-wrapper">
+                            <span class="project-title">1. Coup Board Game Web Application</span>
+                            <!-- เพิ่มปุ่ม Live Demo ตรงนี้ (ใส่ลิงก์จริงตรง href="#") -->
+                            <a href="https://coup-49ffc.web.app/" target="_blank" class="project-link-btn">Live Demo</a>
+                        </div>
                         <span class="project-tech">Full-Stack Web Development</span>
                     </div>
                     <ul class="details-list">
@@ -105,7 +121,7 @@
 
         <!-- ส่วนประสบการณ์ด้าน AI และประกาศนียบัตร -->
         <!-- เพิ่มคลาส reveal ที่นี่ -->
-        <section class="resume-section reveal">
+        <section id="cert-ai" class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">ประกาศนียบัตร & AI<br>(Certifications & AI)</h2>
             </div>
@@ -120,7 +136,7 @@
 
         <!-- ส่วนประวัติการศึกษา -->
         <!-- เพิ่มคลาส reveal ที่นี่ -->
-        <section class="resume-section reveal">
+        <section id="education" class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">การศึกษา<br>(Education)</h2>
             </div>
@@ -139,7 +155,7 @@
 
         <!-- ส่วนทักษะความสามารถ -->
         <!-- เพิ่มคลาส reveal ที่นี่ -->
-        <section class="resume-section reveal">
+        <section id="skills" class="resume-section reveal">
             <div class="section-left">
                 <h2 class="section-title">ทักษะความสามารถ<br>(Technical Skills)</h2>
             </div>
@@ -162,7 +178,7 @@
         </section>
 
         <!-- ส่วน Soft Skills -->
-        <section class="resume-section reveal" style="border-bottom: none;">
+        <section id="soft-skills" class="resume-section reveal" style="border-bottom: none;">
             <div class="section-left">
                 <h2 class="section-title">ทักษะด้านบุคคล<br>(Soft Skills)</h2>
             </div>
@@ -177,6 +193,15 @@
         </section>
 
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 สุพจน์ บำรุง. All rights reserved.</p>
+            <p class="footer-tech">Designed & Built with <i class="fa-solid fa-code"></i> HTML, CSS & Vanilla JS</p>
+        </div>
+        <!-- ปุ่มกลับขึ้นด้านบน -->
+        <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> กลับขึ้นด้านบน</a>
+    </footer>
     
 </div>
 
